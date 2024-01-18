@@ -48,3 +48,15 @@ Compute Node
 $ chmod 733 compute-install.sh
 $ ./compute-install.sh compute_ip controller_ip
 ```
+## Errors
+
+
+error while instance creation
+```
+Exceeds number of retries exhausted all host available for retreying build failures for instance ...
+```
+solution for this go to '/etc/nova/nova-compute' file and change
+```
+#virt_type=kvm
+virt_type=qemu
+```
