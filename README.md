@@ -55,8 +55,12 @@ error while instance creation
 ```
 Exceeds number of retries exhausted all host available for retreying build failures for instance ...
 ```
-solution for this go to '/etc/nova/nova-compute' file and change
+solution for this go to '/etc/nova/nova-compute' file and change in compute node
 ```
 #virt_type=kvm
 virt_type=qemu
+```
+then restart the service
+```
+service nova-compute restart
 ```
